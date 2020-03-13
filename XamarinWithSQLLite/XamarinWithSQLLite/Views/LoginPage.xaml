@@ -5,12 +5,27 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="XamarinWithSQLLite.Views.LoginPage">
-    <StackLayout>
-        <Label x:Name="lbl_Username" Text="Username"/>
-        <Entry x:Name="entry_Username" Placeholder="Username"/>
-        <Label x:Name="lbl_Password" Text="Password"/>
-        <Entry x:Name="entry_Password" Placeholder="Password"/>
-        <Button x:Name="btn_Login" Text="Anmelden" />
+    <StackLayout x:Name="MasterLayout">
+
+
+        <StackLayout x:Name="LogoStack">
+            <Image x:Name="LoginIcon" Source="httpS://asysgmbh.de//themes/asys/images/asys-logo.png"/>
+        </StackLayout>
+        <StackLayout x:Name="LayoutEntryStack" VerticalOptions="StartAndExpand">
+            <StackLayout.Padding>
+                <OnIdiom x:TypeArguments="Thickness">
+                    <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                    <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                </OnIdiom>
+            </StackLayout.Padding>
+            <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"/>
+            <Label x:Name="lbl_Username" Text="Username"/>
+            <Entry x:Name="entry_Username" Placeholder="Username"/>
+            <Label x:Name="lbl_Password" Text="Password"/>
+            <Entry x:Name="entry_Password" Placeholder="Password"/>
+            <Button x:Name="btn_Login" Text="Anmelden" />
+        </StackLayout>
 
     </StackLayout>
+
 </ContentPage>
