@@ -1,13 +1,14 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinWithSQLLite.Views;
 
 namespace XamarinWithSQLLite {
 	public partial class App : Application {
 		public App() {
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new LoginPage();
 		}
 
 		protected override void OnStart() {
