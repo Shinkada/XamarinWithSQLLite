@@ -1,8 +1,10 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace XamarinWithSQLLite.Data {
-	class ISQLite {
+	public interface ISQLite {
+		SQLiteConnection GetConnection();
 	}
 }

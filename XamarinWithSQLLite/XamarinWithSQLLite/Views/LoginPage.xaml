@@ -5,13 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="XamarinWithSQLLite.Views.LoginPage">
-    <StackLayout x:Name="MasterLayout">
+    <StackLayout x:Name="MasterLayout" VerticalOptions="Center">
 
 
         <StackLayout x:Name="LogoStack">
+            <Label x:Name="lbl_NoInternet" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Red"/>
             <Image x:Name="LoginIcon" Source="httpS://asysgmbh.de//themes/asys/images/asys-logo.png"/>
         </StackLayout>
-        <StackLayout x:Name="LayoutEntryStack" VerticalOptions="StartAndExpand">
+        <StackLayout x:Name="LayoutEntryStack" VerticalOptions="Center">
             <StackLayout.Padding>
                 <OnIdiom x:TypeArguments="Thickness">
                     <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
